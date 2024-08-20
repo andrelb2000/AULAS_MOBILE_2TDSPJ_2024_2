@@ -14,9 +14,14 @@ import org.w3c.dom.Text
 class Modelo {
     private  var xModelo: Int = 0
     private  var yModelo: Int = 0
+
+    // (coefX)X + (coefY)Y = eq1
     private  var eq1: Int = 0
     private  var coefXEq1: Int = 2
     private  var coefYEq1: Int = 3
+
+
+
 
     fun getXMod():Int{
         return xModelo
@@ -34,6 +39,8 @@ class Modelo {
     fun setCoefXEq1(texto:String){
         coefXEq1 = texto.toInt()
     }
+
+
 
 
     /// TODO ///
