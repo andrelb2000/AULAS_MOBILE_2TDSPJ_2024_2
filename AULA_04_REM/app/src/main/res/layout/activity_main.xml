@@ -98,4 +98,5 @@
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ID1_EQ1_textView" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

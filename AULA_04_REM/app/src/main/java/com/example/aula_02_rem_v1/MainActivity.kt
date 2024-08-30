@@ -119,4 +119,9 @@ class MainActivity : AppCompatActivity() {
         }
         inicializar()
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+
+    }
 }
