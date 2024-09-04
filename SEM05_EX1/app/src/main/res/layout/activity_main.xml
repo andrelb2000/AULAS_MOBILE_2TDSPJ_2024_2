@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/ID1_PRECOeditTextNumberDecimal"
+        android:layout_width="118dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/ID1_INSEREbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:text="Insere"
+        app:layout_constraintStart_toEndOf="@+id/ID1_PRECOeditTextNumberDecimal"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/ID1_LIMPAbutton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="28dp"
+        android:text="Limpa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/ID1_INSEREbutton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ID1_SOMAtextView"
+        android:layout_width="119dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="44dp"
+        android:text="R$ Soma"
+        app:layout_constraintBottom_toTopOf="@+id/ID1_LISTAlistView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ID1_PRECOeditTextNumberDecimal"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/ID1_MAIORtextView2"
+        android:layout_width="126dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="36dp"
+        android:text="R$ Maior"
+        app:layout_constraintBottom_toTopOf="@+id/ID1_LISTAlistView"
+        app:layout_constraintStart_toEndOf="@+id/ID1_SOMAtextView"
+        app:layout_constraintTop_toBottomOf="@+id/ID1_INSEREbutton"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/ID1_MENORtextView3"
+        android:layout_width="103dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="32dp"
+        android:text="R$ Menor"
+        app:layout_constraintBottom_toTopOf="@+id/ID1_LISTAlistView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/ID1_MAIORtextView2"
+        app:layout_constraintTop_toBottomOf="@+id/ID1_LIMPAbutton2"
+        app:layout_constraintVertical_bias="0.01" />
+
+    <ListView
+        android:id="@+id/ID1_LISTAlistView"
+        android:layout_width="362dp"
+        android:layout_height="227dp"
+        android:layout_marginBottom="300dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.326"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
