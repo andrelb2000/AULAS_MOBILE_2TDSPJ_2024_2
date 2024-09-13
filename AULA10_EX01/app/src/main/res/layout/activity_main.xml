@@ -8,60 +8,71 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="116dp"
-        android:layout_marginTop="12dp"
-        android:text="Servico"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/ID1_CODIGOeditTextText2" />
+        android:layout_marginTop="16dp"
+        android:text="Custo"
+        app:layout_constraintEnd_toStartOf="@+id/textView2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ID1_NOMEPECAeditTextText" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="16dp"
         android:text="VALOR"
+        app:layout_constraintEnd_toStartOf="@+id/textView3"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/ID1_NOMEPECAeditTextText" />
 
-    <EditText
-        android:id="@+id/ID1_NOMEPECAeditTextText"
-        android:layout_width="173dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="24dp"
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Name"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Servico"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/ID1_CODIGOeditTextText2" />
 
     <EditText
         android:id="@+id/ID1_CODIGOeditTextText2"
         android:layout_width="129dp"
         android:layout_height="41dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="12dp"
         android:ems="10"
         android:inputType="text"
         android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/ID1_NOMEPECAeditTextText"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteY="13dp" />
+
+    <EditText
+        android:id="@+id/ID1_NOMEPECAeditTextText"
+        android:layout_width="173dp"
+        android:layout_height="38dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name"
+        app:layout_constraintEnd_toStartOf="@+id/ID1_CODIGOeditTextText2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="17dp" />
 
     <EditText
         android:id="@+id/ID1_CUSTOeditTextNumber"
         android:layout_width="113dp"
         android:layout_height="45dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/ID1_VALOReditTextNumber2"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -69,10 +80,11 @@
         android:id="@+id/ID1_VALOReditTextNumber2"
         android:layout_width="100dp"
         android:layout_height="47dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/ID1_SERVICOeditTextNumber3"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/ID1_CUSTOeditTextNumber"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
@@ -80,52 +92,42 @@
         android:id="@+id/ID1_SERVICOeditTextNumber3"
         android:layout_width="102dp"
         android:layout_height="46dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/ID1_VALOReditTextNumber2"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="12dp"
-        android:text="Custo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ID1_NOMEPECAeditTextText" />
-
     <Button
         android:id="@+id/ID1_INSEREbutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_width="87dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="28dp"
         android:text="INSERE"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ID1_ALTERAbutton"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ID1_CUSTOeditTextNumber" />
 
     <ListView
         android:id="@+id/ID1_LISTA_ListView"
-        android:layout_width="309dp"
-        android:layout_height="310dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="308dp"
+        android:layout_height="362dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ID1_INSEREbutton" />
+        app:layout_constraintTop_toBottomOf="@+id/ID1_ALTERAbutton" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="40dp"
         android:text="Lucro"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ID1_LUCROtextView6"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ID1_LISTA_ListView" />
 
@@ -133,10 +135,10 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="36dp"
         android:text="TOTAL"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ID1_TOTALtextView7"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/ID1_LUCROtextView6"
         app:layout_constraintTop_toBottomOf="@+id/ID1_LISTA_ListView" />
 
@@ -144,10 +146,10 @@
         android:id="@+id/ID1_LUCROtextView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="40dp"
         android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView5"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/ID1_LISTA_ListView" />
 
@@ -155,12 +157,43 @@
         android:id="@+id/ID1_TOTALtextView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="36dp"
         android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.227"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView5"
         app:layout_constraintTop_toBottomOf="@+id/ID1_LISTA_ListView" />
+
+    <Button
+        android:id="@+id/ID1_ALTERAbutton"
+        android:layout_width="79dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="28dp"
+        android:text="Altera"
+        app:layout_constraintEnd_toStartOf="@+id/ID1_REMOVEbutton2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ID1_INSEREbutton"
+        app:layout_constraintTop_toBottomOf="@+id/ID1_CUSTOeditTextNumber" />
+
+    <Button
+        android:id="@+id/ID1_REMOVEbutton2"
+        android:layout_width="87dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="28dp"
+        android:text="Remove"
+        app:layout_constraintEnd_toStartOf="@+id/ID1_LIMPAbutton3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ID1_ALTERAbutton"
+        app:layout_constraintTop_toBottomOf="@+id/ID1_VALOReditTextNumber2" />
+
+    <Button
+        android:id="@+id/ID1_LIMPAbutton3"
+        android:layout_width="84dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="28dp"
+        android:text="Limpa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ID1_REMOVEbutton2"
+        app:layout_constraintTop_toBottomOf="@+id/ID1_SERVICOeditTextNumber3" />
 </androidx.constraintlayout.widget.ConstraintLayout>
