@@ -65,6 +65,8 @@ class MainActivity : AppCompatActivity() {
     private var adaptador:ArrayAdapter<Peca>? = null
     private var listaPecasView:ListView? = null
 
+    private var itemEmEdicao:Int = 0
+
     fun inicializacao(){
         nomePeca = findViewById(R.id.ID1_NOMEPECAeditTextText)
         codigoPeca = findViewById(R.id.ID1_CODIGOeditTextText2)
@@ -97,12 +99,37 @@ class MainActivity : AppCompatActivity() {
             lucroPecas?.text = "R$ ${lucro}"
         }
         listaPecasView?.setOnItemClickListener { adaptador, view, i, l ->
-            nomePeca?.setText(listaPecas?.get(i)?.getNomePeca() )
-            codigoPeca?.setText(listaPecas?.get(i)?.getCodigoPeca())
-            valorPeca?.setText("${listaPecas?.get(i)?.getValorPeca()}")
-            custoPeca?.setText("${listaPecas?.get(i)?.getCustoPeca()}")
-            servicoPeca?.setText("${listaPecas?.get(i)?.getServicoPeca()}")
+            var peca:Peca = listaPecas?.get(i)
+            nomePeca?.setText(peca.getNomePeca() )
+            codigoPeca?.setText(peca.getCodigoPeca())
+            valorPeca?.setText("${peca.getValorPeca()}")
+            custoPeca?.setText("${peca.getCustoPeca()}")
+            servicoPeca?.setText("${peca.getServicoPeca()}")
+            itemEmEdicao = i
         }
+        /// EDICAO ///
+        /*
+        botaoEditar?.setOnClickListener {
+            var nome   = nomePeca?.text.toString()
+            var codigo = codigoPeca?.text.toString()
+            var valor  = valorPeca?.text.toString().toFloat()
+            var custo  = custoPeca?.text.toString().toFloat()
+            var servico = servicoPeca?.text.toString().toFloat()
+            var pecaInserida = Peca(nome,codigo,valor,custo,servico)
+            listaPecas.set(itemEmEdicao,pecaInserida)
+            adaptador?.notifyDataSetChanged()
+            var total:Float = 0F
+            var lucro:Float = 0F
+            for(peca in listaPecas!!){
+                total += peca.total()
+                lucro += peca.lucro()
+            }
+            totalPecas?.text = "R$ ${total}"
+            lucroPecas?.text = "R$ ${lucro}"
+        }
+*/
+
+
     }
 
 
