@@ -84,10 +84,12 @@ class MainActivity : AppCompatActivity() {
 
         listaPecas = ArrayList<Peca>()
         adaptador = ArrayAdapter<Peca>(this,android.R.layout.simple_list_item_1, listaPecas!!)
+        listaPecasView?.adapter = adaptador
+
+
         adaptadorSP = ArrayAdapter<Peca>(this,android.R.layout.simple_spinner_item, listaPecas!!)
         adaptadorSP?.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         listaSpinner?.adapter = adaptadorSP
-        listaPecasView?.adapter = adaptador
 
         botaoInsere?.setOnClickListener {
             var nome   = nomePeca?.text.toString()
@@ -163,6 +165,6 @@ class MainActivity : AppCompatActivity() {
         inicializacao()
     }
 
-    ov
+
 
 }
