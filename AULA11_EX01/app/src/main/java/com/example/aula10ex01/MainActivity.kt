@@ -64,6 +64,7 @@ class MainActivity : AppCompatActivity() {
     private var totalPecas:TextView? = null
     private var lucroPecas:TextView? = null
     private var listaPecas: ArrayList<Peca>? = null
+
     private var adaptador:ArrayAdapter<Peca>? = null
     private var adaptadorSP:ArrayAdapter<Peca>? = null
     private var listaPecasView:ListView? = null
@@ -80,13 +81,11 @@ class MainActivity : AppCompatActivity() {
         lucroPecas = findViewById(R.id.ID1_LUCROtextView6)
         listaPecasView = findViewById(R.id.ID1_LISTA_ListView)
         listaSpinner   = findViewById(R.id.ID1_LISTAspinner)
-        
 
         listaPecas = ArrayList<Peca>()
+
         adaptador = ArrayAdapter<Peca>(this,android.R.layout.simple_list_item_1, listaPecas!!)
         listaPecasView?.adapter = adaptador
-
-
         adaptadorSP = ArrayAdapter<Peca>(this,android.R.layout.simple_spinner_item, listaPecas!!)
         adaptadorSP?.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         listaSpinner?.adapter = adaptadorSP
@@ -152,7 +151,6 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -163,6 +161,7 @@ class MainActivity : AppCompatActivity() {
             insets
         }
         inicializacao()
+
     }
 
 
