@@ -126,7 +126,8 @@ class MainActivity : AppCompatActivity() {
             detalheIntent.putExtras(pacoteDetalhe)
             startActivity(detalheIntent)
         }
-        listaSpinner.setOnItemClickListener { adaptadorSP, view, i, l ->
+        /*
+        listaSpinner?.setOnItemClickListener { adaptadorSP, view, i, l ->
             nomePeca?.setText(listaPecas?.get(i)?.getNomePeca() )
             codigoPeca?.setText(listaPecas?.get(i)?.getCodigoPeca())
             valorPeca?.setText("${listaPecas?.get(i)?.getValorPeca()}")
@@ -144,6 +145,8 @@ class MainActivity : AppCompatActivity() {
             detalheIntent.putExtras(pacoteDetalhe)
             startActivity(detalheIntent)
         }
+        */
+
 
     }
 
@@ -159,4 +162,7 @@ class MainActivity : AppCompatActivity() {
         }
         inicializacao()
     }
+
+    ov
+
 }
