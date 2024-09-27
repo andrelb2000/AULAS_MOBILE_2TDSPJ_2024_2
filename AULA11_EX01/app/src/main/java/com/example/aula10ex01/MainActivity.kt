@@ -1,5 +1,6 @@
 package com.example.aula10ex01
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Button
@@ -113,7 +114,37 @@ class MainActivity : AppCompatActivity() {
             valorPeca?.setText("${listaPecas?.get(i)?.getValorPeca()}")
             custoPeca?.setText("${listaPecas?.get(i)?.getCustoPeca()}")
             servicoPeca?.setText("${listaPecas?.get(i)?.getServicoPeca()}")
+
+            val pacoteDetalhe = Bundle()
+            pacoteDetalhe.putString("NOME",nomePeca?.text.toString())
+            pacoteDetalhe.putString("CODIGO",codigoPeca?.text.toString())
+            pacoteDetalhe.putString("PRECO",valorPeca?.text.toString())
+            pacoteDetalhe.putString("CUSTO",custoPeca?.text.toString())
+            pacoteDetalhe.putString("SERVICO",servicoPeca?.text.toString())
+
+            val detalheIntent = Intent(this,PecasActivity::class.java)
+            detalheIntent.putExtras(pacoteDetalhe)
+            startActivity(detalheIntent)
         }
+        listaSpinner.setOnItemClickListener { adaptadorSP, view, i, l ->
+            nomePeca?.setText(listaPecas?.get(i)?.getNomePeca() )
+            codigoPeca?.setText(listaPecas?.get(i)?.getCodigoPeca())
+            valorPeca?.setText("${listaPecas?.get(i)?.getValorPeca()}")
+            custoPeca?.setText("${listaPecas?.get(i)?.getCustoPeca()}")
+            servicoPeca?.setText("${listaPecas?.get(i)?.getServicoPeca()}")
+
+            val pacoteDetalhe = Bundle()
+            pacoteDetalhe.putString("NOME",nomePeca?.text.toString())
+            pacoteDetalhe.putString("CODIGO",codigoPeca?.text.toString())
+            pacoteDetalhe.putString("PRECO",valorPeca?.text.toString())
+            pacoteDetalhe.putString("CUSTO",custoPeca?.text.toString())
+            pacoteDetalhe.putString("SERVICO",servicoPeca?.text.toString())
+
+            val detalheIntent = Intent(this,PecasActivity::class.java)
+            detalheIntent.putExtras(pacoteDetalhe)
+            startActivity(detalheIntent)
+        }
+
     }
 
 
