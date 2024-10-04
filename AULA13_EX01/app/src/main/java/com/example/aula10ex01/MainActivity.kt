@@ -22,7 +22,6 @@ class Peca : Serializable {
     private var valorPeca: Float
     private var custoPeca: Float
     private var servicoPeca: Float
-
     constructor(
         nomePeca: String,
         codigoPeca: String,
@@ -36,39 +35,30 @@ class Peca : Serializable {
         this.custoPeca = custoPeca
         this.servicoPeca = servicoPeca
     }
-
     fun total(): Float {
         return (valorPeca + servicoPeca)
     }
-
     fun lucro(): Float {
         return (valorPeca - custoPeca + servicoPeca)
     }
-
     override fun toString(): String {
         return "Peca('$nomePeca' - '$codigoPeca' = R$ $valorPeca)"
     }
-
     fun getNomePeca(): String {
         return nomePeca
     }
-
     fun getCodigoPeca(): String {
         return codigoPeca
     }
-
     fun getValorPeca(): Float {
         return valorPeca
     }
-
     fun getCustoPeca(): Float {
         return custoPeca
     }
-
     fun getServicoPeca(): Float {
         return servicoPeca
     }
-
 }
 
 class MainActivity : AppCompatActivity() {
@@ -135,15 +125,21 @@ class MainActivity : AppCompatActivity() {
             servicoPeca?.setText("${listaPecas?.get(i)?.getServicoPeca()}")
 
             val pacoteDetalhe = Bundle()
+            // Vou substituir apenas pelo INIDICE //
+            /*
             pacoteDetalhe.putString("NOME",nomePeca?.text.toString())
             pacoteDetalhe.putString("CODIGO",codigoPeca?.text.toString())
             pacoteDetalhe.putString("PRECO",valorPeca?.text.toString())
             pacoteDetalhe.putString("CUSTO",custoPeca?.text.toString())
-            pacoteDetalhe.putString("SERVICO",servicoPeca?.text.toString())
+            pacoteDetalhe.putString("SERVICO",servicoPeca?.text.toString()) */
+
+            // Vou enviar apenas a LISTA mais o INDICE
+            pacoteDetalhe.putInt("INDICE",i)
+            // Colocando os dados completos da lista  para envio//
             pacoteDetalhe.putSerializable("LISTA",listaPecas)
 
             val detalheIntent = Intent(this,PecasActivity::class.java)
-
+            /// Enviando pacote para a activity filha
             detalheIntent.putExtras(pacoteDetalhe)
             startActivity(detalheIntent)
         }

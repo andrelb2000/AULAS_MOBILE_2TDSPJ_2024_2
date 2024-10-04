@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PecasActivity">
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="157dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="196dp"
+        android:text="Detalhe da Peça"
+        app:layout_constraintBottom_toTopOf="@+id/ID2_NOMEPECAeditTextText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.627"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/ID2_NOMEPECAeditTextText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name"
+        app:layout_constraintBottom_toTopOf="@+id/ID2_CODIGOeditTextText2"
+        app:layout_constraintEnd_toEndOf="@+id/textView6"
+        app:layout_constraintHorizontal_bias="0.23"
+        app:layout_constraintStart_toStartOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <EditText
+        android:id="@+id/ID2_CODIGOeditTextText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name"
+        app:layout_constraintBottom_toTopOf="@+id/ID2_VALOReditTextNumber2"
+        app:layout_constraintEnd_toEndOf="@+id/ID2_NOMEPECAeditTextText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ID2_NOMEPECAeditTextText"
+        app:layout_constraintTop_toBottomOf="@+id/ID2_NOMEPECAeditTextText" />
+
+    <EditText
+        android:id="@+id/ID2_CUSTOeditTextNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/ID2_SERVICOeditTextNumber3"
+        app:layout_constraintEnd_toEndOf="@+id/ID2_VALOReditTextNumber2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ID2_VALOReditTextNumber2"
+        app:layout_constraintTop_toBottomOf="@+id/ID2_VALOReditTextNumber2" />
+
+    <EditText
+        android:id="@+id/ID2_SERVICOeditTextNumber3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/ID2_VOLTAbutton"
+        app:layout_constraintEnd_toEndOf="@+id/ID2_CUSTOeditTextNumber"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ID2_CUSTOeditTextNumber"
+        app:layout_constraintTop_toBottomOf="@+id/ID2_CUSTOeditTextNumber" />
+
+    <Button
+        android:id="@+id/ID2_VOLTAbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Voltar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/ID2_SERVICOeditTextNumber3"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="@+id/ID2_SERVICOeditTextNumber3"
+        app:layout_constraintTop_toBottomOf="@+id/ID2_SERVICOeditTextNumber3" />
+
+    <EditText
+        android:id="@+id/ID2_VALOReditTextNumber2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/ID2_CUSTOeditTextNumber"
+        app:layout_constraintEnd_toEndOf="@+id/ID2_CODIGOeditTextText2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ID2_CODIGOeditTextText2"
+        app:layout_constraintTop_toBottomOf="@+id/ID2_CODIGOeditTextText2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
