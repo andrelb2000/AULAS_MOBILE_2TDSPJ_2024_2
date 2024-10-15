@@ -25,6 +25,9 @@ class Telefone:Serializable{
 class Pessoa:Serializable{
     private var nomePessoa:String = "Joao"
     private var telPessoa:Telefone = Telefone()
+
+
+
     override fun toString(): String {
         return "$nomePessoa"
     }

@@ -67,8 +67,12 @@ class EditarITEMActivity : AppCompatActivity() {
             startActivity(mainActivityIntent)
         }
         cancelaButton?.setOnClickListener {
+            var pacoteEnvio: Bundle = Bundle()
+            pacoteEnvio.putSerializable("LISTA2",listaChegada)
             // Voltar para a Activity Principal
             val mainActivityIntent = Intent(this,MainActivity::class.java)
+            //// Enviar a lista de volta
+            mainActivityIntent.putExtras(pacoteEnvio)
             /// Se já houver uma criada, reutilize
             mainActivityIntent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
             startActivity(mainActivityIntent)
