@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "958496055641",
+    "project_id": "listadetalheex16",
+    "storage_bucket": "listadetalheex16.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:958496055641:android:d122c41efbc05953eeec48",
+        "android_client_info": {
+          "package_name": "com.example.applistadetalheedicao_ex1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHPLdZQ3BUg92z9VKQQJ1kkAdQpVKYyIE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
