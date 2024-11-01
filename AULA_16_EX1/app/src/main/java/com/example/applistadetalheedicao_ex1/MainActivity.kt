@@ -101,7 +101,7 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        FirebaseApp.initializeApp(this)
+        //FirebaseApp.initializeApp(this)
         inicializar()
         inicializarAcoes()
         obterDadosRetorno()
